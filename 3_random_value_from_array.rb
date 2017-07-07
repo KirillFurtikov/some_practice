@@ -1,4 +1,4 @@
-class Banners
+class RandomTaker
   attr_reader :numbers_count
 
   def initialize

@@ -1,8 +1,8 @@
-FILENAME = './IpToCountry.csv'
+FILENAME = './IpToCountry.csv'.freeze
 
 @lines = []
 
-ip = ARGV[0].split('.').map { |digit| digit.to_i }
+ip = ARGV[0].split('.').map(&:to_i)
 ip_representation = ip[3] + (ip[2] * 256) + (ip[1] * 256**2) + (ip[0] * 256**3)
 
 def read_csv_rows(filename)
