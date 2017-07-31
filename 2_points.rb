@@ -9,8 +9,8 @@ radius = gets.chomp.to_f
 print 'Введите количество проверяемых точек: '
 points_count = gets.chomp.to_i
 
-points_count.times do
-  puts 'Введите координаты X и Y всех точек'
+points_count.times do |i|
+  print "Введите координаты X и Y точки #{i + 1}: "
   points << gets.chomp.split(' ').map(&:to_f)
 end
 
@@ -20,4 +20,4 @@ included =
   end
 
 puts 'Точки, входящие в окружность:'
-included.each { |x, y| puts "X: #{x}, Y: #{y}" }
+included.each_with_index { |xy, i| puts "#{i+1}) X: #{xy[0]}, Y: #{xy[1]}" }
