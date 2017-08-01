@@ -20,6 +20,6 @@ class RandomTaker
   end
 
   def take
-    @numbers.delete(@numbers.sample) unless @numbers.empty?
+    @numbers.delete(@numbers.sample)
   end
 end
